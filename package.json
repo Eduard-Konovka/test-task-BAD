@@ -1,0 +1,19 @@
+{
+  "name": "test-task-bad",
+  "version": "1.0.0",
+  "description": "Test task for 'Become A Developer 2022'",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eduard-Konovka/test-task-BAD.git"
+  },
+  "author": "Eduard Konovka <ed098ua@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eduard-Konovka/test-task-BAD/issues"
+  },
+  "homepage": "https://github.com/Eduard-Konovka/test-task-BAD#readme"
+}
