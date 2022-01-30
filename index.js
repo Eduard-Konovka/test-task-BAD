@@ -9,7 +9,7 @@ async function listNumbers() {
 
 const findValues = (data) => {
   const numbersArr = data
-    .split("\n")
+    .split(/[^-0-9]/)
     .filter((elem) => elem.trim())
     .filter((elem) => isFinite(elem))
     .map((elem) => Number(elem));
