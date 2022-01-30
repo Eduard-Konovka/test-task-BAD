@@ -8,7 +8,11 @@ async function listNumbers() {
 }
 
 const findValues = (data) => {
-  const numbersArr = data.split("\n").map((elem) => Number(elem));
+  const numbersArr = data
+    .split("\n")
+    .filter((elem) => elem.trim())
+    .filter((elem) => isFinite(elem))
+    .map((elem) => Number(elem));
   const sortNumbers = [...numbersArr].sort((a, b) => a - b);
 
   console.log(
