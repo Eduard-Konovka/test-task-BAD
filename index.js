@@ -27,7 +27,7 @@ const findValues = (data) => {
   console.log("Медиана: ", median);
 
   const arithmeticMean =
-    sortNumbers.reduce((acc, elem) => acc + elem, 0) / sortNumbers.length;
+    numbersArr.reduce((acc, elem) => acc + elem, 0) / sortNumbers.length;
   console.log("Среднее арифметическое значение: ", arithmeticMean);
 
   const ascendingSequence = () => {
@@ -35,13 +35,15 @@ const findValues = (data) => {
     let sequence = 0;
 
     [...numbersArr].sort((a, b) => {
-      if (a < b) {
+      if (a > b) {
         sequence++;
       } else {
         sequenceArr.push(sequence);
         sequence = 0;
       }
     });
+
+    sequenceArr.push(sequence);
 
     const sortSequence = sequenceArr.sort((a, b) => b - a);
     return sortSequence[0];
@@ -56,13 +58,15 @@ const findValues = (data) => {
     let sequence = 0;
 
     [...numbersArr].sort((a, b) => {
-      if (a > b) {
+      if (a < b) {
         sequence++;
       } else {
         sequenceArr.push(sequence);
         sequence = 0;
       }
     });
+
+    sequenceArr.push(sequence);
 
     const sortSequence = sequenceArr.sort((a, b) => b - a);
     return sortSequence[0];
