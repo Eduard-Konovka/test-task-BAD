@@ -12,7 +12,7 @@ const findValues = (data) => {
     .split(/[^-0-9]/) // Превращаем данные в массив разбив строку по всем символам кроме "-" и чисел
     .filter((elem) => elem.trim()) // Обрезаем пустые символы элементов массива
     .filter((elem) => isFinite(elem)) // Удаляем елементы массива "-" ("минус" без цифр)
-    .map((elem) => Number(elem)); // Приводим елементы массива к числу
+    .map((elem) => parseInt(elem)); // Приводим елементы массива к числу
   const sortNumbers = [...numbersArr].sort((a, b) => a - b); // Сортируем массив по возрастанию
 
   console.log(
